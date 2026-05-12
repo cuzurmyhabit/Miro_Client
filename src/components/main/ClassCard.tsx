@@ -6,6 +6,8 @@ type ClassCardProps = {
   points: string
   progress: number
   highlighted?: boolean
+  /** 멘티 등에서 카드 클릭 시 상세로 이동 */
+  onActivate?: () => void
 }
 
 export default function ClassCard({
@@ -14,9 +16,24 @@ export default function ClassCard({
   points,
   progress,
   highlighted = false,
+  onActivate,
 }: ClassCardProps) {
+  const interactive = Boolean(onActivate)
+
   return (
-    <article className={`class-card ${highlighted ? 'is-highlighted' : ''}`}>
+    <article
+      className={`class-card ${highlighted ? 'is-highlighted' : ''}${interactive ? ' is-interactive' : ''}`}
+      onClick={onActivate}
+      onKeyDown={(e) => {
+        if (!onActivate) return
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onActivate()
+        }
+      }}
+      tabIndex={interactive ? 0 : undefined}
+      role={interactive ? 'button' : undefined}
+    >
       <p className="class-category">
         <span>{category}</span>
       </p>

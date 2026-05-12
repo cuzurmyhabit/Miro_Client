@@ -1,0 +1,456 @@
+.mentee-class-detail-banner {
+  width: 100%;
+  margin-top: var(--top-nav-height);
+  padding: clamp(52px, 9vw, 96px) clamp(16px, 4vw, 28px) 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: linear-gradient(
+    180deg,
+    rgba(240, 253, 249, 0.65) 0%,
+    #fff 100%
+  );
+}
+
+.mentee-class-detail-banner-inner {
+  max-width: min(1160px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(12px, 3vw, 24px);
+  width: 100%;
+}
+
+.mentee-class-detail-back {
+  border: 0;
+  background: transparent;
+  color: var(--gray-600);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 0;
+  white-space: nowrap;
+}
+
+.mentee-class-detail-back:hover {
+  color: var(--gray-900);
+}
+
+.mentee-class-detail-banner-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 4vw, 32px);
+  min-width: 0;
+}
+
+.mentee-class-detail-illust {
+  width: clamp(100px, 22vw, 140px);
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.mentee-class-detail-title {
+  margin: 0;
+  font-size: clamp(26px, 4.5vw, 42px);
+  font-weight: 300;
+  color: var(--gray-900);
+  line-height: 1.25;
+  text-align: center;
+}
+
+.mentee-class-detail-status-wrap {
+  max-width: min(1160px, 100%);
+  width: 100%;
+  margin: clamp(20px, 3.5vw, 28px) auto 30px;
+  padding: 0 clamp(16px, 4vw, 28px);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mentee-class-status {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: clamp(13px, 2vw, 15px);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.mentee-class-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.mentee-class-status--ongoing {
+  color: var(--gray-800);
+}
+
+.mentee-class-status--ongoing .mentee-class-status-dot {
+  background: var(--secondary);
+}
+
+.mentee-class-status--done {
+  color: #f1646b;
+}
+
+.mentee-class-status--done .mentee-class-status-dot {
+  background: #f1646b;
+}
+
+.mentee-class-status--scheduled {
+  color: var(--gray-600);
+}
+
+.mentee-class-status--scheduled .mentee-class-status-dot {
+  background: var(--gray-400);
+}
+
+.mentee-class-detail-main {
+  padding-top: 0;
+}
+
+.mentee-class-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1000px);
+  gap: clamp(20px, 4vw, 32px);
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  max-width: min(1400px, 100%);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.mentee-class-detail-sidebar {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mentee-write-post-btn {
+  width: 100%;
+  max-width: 340px;
+  height: 68px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 14px;
+  background: #6dedc2;
+  color: var(--gray-900);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.mentee-write-post-btn img {
+  flex-shrink: 0;
+}
+
+.mentee-side-card {
+  width: 100%;
+  max-width: 340px;
+  box-sizing: border-box;
+  border-radius: 14px;
+  border: 1px solid #ececec;
+  background: #fff;
+}
+
+.mentee-class-code-card {
+  height: 125px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mentee-deadline-card {
+  height: 218px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.mentee-side-card-title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--gray-600);
+}
+
+.mentee-class-code-value {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--gray-900);
+  word-break: break-all;
+}
+
+.mentee-deadline-empty {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--gray-600);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.mentee-deadline-more {
+  position: absolute;
+  right: 30px;
+  bottom: 22px;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.mentee-market-wire-btn {
+  width: 100%;
+  max-width: 340px;
+  height: 48px;
+  box-sizing: border-box;
+  border-radius: 14px;
+  border: 1px dashed #bdbdbd;
+  background: transparent;
+  color: var(--gray-600);
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.mentee-feed-panel {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 475px;
+  box-sizing: border-box;
+  padding: 0;
+  border-radius: 14px;
+  border: none;
+  background: transparent;
+}
+
+.mentee-feed-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mentee-feed-card {
+  display: grid;
+  grid-template-columns: 54px 1fr auto;
+  align-items: start;
+  column-gap: 16px;
+  row-gap: 0;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 94px;
+  height: auto;
+  padding: 20px 24px;
+  border-radius: 14px;
+  border: 1px solid #ececec;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.mentee-feed-icon-circle {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #d2f9ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mentee-feed-icon-img {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.mentee-feed-body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.mentee-feed-author {
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--gray-800);
+  width: 100%;
+}
+
+.mentee-feed-author-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.mentee-feed-author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mentee-feed-card-title {
+  margin: 0 0 6px;
+  font-size: clamp(16px, 2.4vw, 18px);
+  font-weight: 500;
+  color: var(--gray-900);
+  line-height: 1.35;
+  text-align: left;
+  width: 100%;
+}
+
+.mentee-feed-after-title {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.mentee-feed-date {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-600);
+  text-align: left;
+  width: 100%;
+}
+
+.mentee-feed-body-text {
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--gray-800);
+  text-align: left;
+  width: 100%;
+}
+
+.mentee-feed-comment-row {
+  margin-top: 0;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray-700);
+  width: 100%;
+  text-align: left;
+}
+
+.mentee-feed-comment-row img {
+  flex-shrink: 0;
+}
+
+.mentee-feed-comment-row--action {
+  color: var(--gray-700);
+}
+
+.mentee-feed-menu {
+  border: 0;
+  background: transparent;
+  color: var(--gray-500);
+  font-size: 20px;
+  line-height: 1;
+  padding: 4px 8px;
+  cursor: pointer;
+  align-self: start;
+}
+
+@media (max-width: 900px) {
+  .mentee-class-detail-banner {
+    padding-top: clamp(40px, 8vw, 64px);
+  }
+
+  .mentee-class-detail-banner-inner {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
+
+  .mentee-class-detail-back {
+    justify-self: start;
+  }
+
+  .mentee-class-detail-banner-main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mentee-class-detail-title {
+    text-align: center;
+  }
+
+  .mentee-class-detail-status-wrap {
+    justify-content: center;
+  }
+
+  .mentee-class-detail-layout {
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+  }
+
+  .mentee-feed-after-title {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .mentee-class-detail-sidebar {
+    max-width: none;
+  }
+
+  .mentee-write-post-btn,
+  .mentee-side-card,
+  .mentee-market-wire-btn {
+    max-width: none;
+  }
+
+  .mentee-class-code-card,
+  .mentee-deadline-card {
+    height: auto;
+    min-height: 125px;
+  }
+
+  .mentee-deadline-card {
+    min-height: 218px;
+  }
+}

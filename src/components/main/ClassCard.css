@@ -14,6 +14,15 @@
   transition: background-color 0.2s, border-color 0.2s;
 }
 
+.class-card.is-interactive {
+  cursor: pointer;
+}
+
+.class-card.is-interactive:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .class-card.is-highlighted {
   background: #fff;
 }

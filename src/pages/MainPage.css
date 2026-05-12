@@ -373,6 +373,35 @@
   color: #2e2e2e;
 }
 
+.mentee-class-section h2 {
+  margin-bottom: 14px;
+}
+
+.mentee-status-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: clamp(18px, 4vw, 24px);
+}
+
+.mentee-status-tabs button {
+  width: clamp(72px, 12vw, 86px);
+  height: clamp(34px, 6vw, 40px);
+  border: 0;
+  border-radius: 8px;
+  background: #efefef;
+  color: #7a7a7a;
+  font-family: inherit;
+  font-size: clamp(13px, 2.2vw, 16px);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.mentee-status-tabs button.active {
+  background: #d2f9ec;
+  color: var(--gray-900);
+}
+
 .class-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 380px));
@@ -380,6 +409,34 @@
   gap: clamp(12px, 2.5vw, 20px);
   width: 100%;
   box-sizing: border-box;
+}
+
+.join-class-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.join-class-btn {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 39px;
+  color: var(--gray-600);
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.join-class-btn img {
+  width: clamp(56px, 10vw, 76px);
+  height: clamp(56px, 10vw, 76px);
 }
 
 .more-btn {
